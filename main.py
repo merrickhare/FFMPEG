@@ -1,8 +1,10 @@
-import os
 import tkinter
-import sys
+from tkinter import Tk
+import run
 
-os.system('start cmd /k "FFMPEG"')
+w = tkinter.Tk()
+wn = run.win(w, "400x400", "Convert MP$ to FLV", "icon.png")
+w.mainloop()
 
 
 
