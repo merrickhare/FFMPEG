@@ -29,3 +29,6 @@ class win:
         def addLabel():
             tkinter.Label(w,text="VideoName.mp4").grid(row=0)
             tkinter.Label(w,text="New Video Name").grid(row=1)
+
+        addButton()
+        addLabel()
