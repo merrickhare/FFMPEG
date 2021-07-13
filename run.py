@@ -3,6 +3,7 @@ import sys
 import tkinter
 from tkinter import Tk
 from pathlib import Path, PureWindowsPath
+from tkinter import filedialog
 
 
 class win:
@@ -25,10 +26,18 @@ class win:
         def addButton():
             quitButton = tkinter.Button(w, text="Exit", width=12, command=tkinter._exit).grid(row=4,column=0)
             button = tkinter.Button(w,text="Convert Video", command=runCommand).grid(row=4,column=1)
+            pickFile = tkinter.Button(w,text="Pick your video file", width=14, command=fileOpenBox).grid(row=4,column=2)
 
         def addLabel():
             tkinter.Label(w,text="VideoName.mp4").grid(row=0)
             tkinter.Label(w,text="New Video Name").grid(row=1)
+            tkinter.Label(w,text="").grid(row=2)
+        
+        def fileOpenBox():
+           nameOfFile = filedialog.askopenfilename(initialdir = "C:\\",title = "Select file",filetypes = ((".mp4","*.mp4"),("all files","*.*")))
+      
+
+
 
         addButton()
         addLabel()
